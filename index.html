@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./adlogo.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>ADDIDAS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+       * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+span {
+    color: #ffa343;
+}
+
+.h-right {
+    display: flex;
+    align-items: center;
+}
+
+.h-right a:first-child {
+    color: white;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.h-right a {
+    vertical-align: middle;
+    font-size: 20px;
+    margin-right: 18px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.h-right a:hover {
+    color: #ffa343;
+    transform: translatey(-4px);
+}
+
+.menu li a:hover {
+    color: #ffa343;
+    transform: translate(0, -4px);
+}
+
+section {
+    padding: 66px 10%;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.6)),
+        url(./mainimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.home h5 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    color: #ffa343;
+}
+
+.home h1 {
+    font-size: 103px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 7.5rem;
+}
+
+.home p {
+    font-size: large;
+    color: white;
+    margin-bottom: 35px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffa343;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    transform: translateX(8px);
+    color: white;
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.row-img {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.row-img:hover {
+    transform: scale(1.2);
+}
+
+.row-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-content h4 {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.feature-content h4:hover {
+    color: #ffa343;
+}
+
+.fashion-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+
+.fashion-blog img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.fashion-blog-text h5 {
+
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    color: #ffa343;
+}
+
+.fashion-blog-text h2 {
+
+    font-size: 75px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 6.5rem;
+}
+
+#btn2 {
+    margin-top: 60px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-text h2 {
+    font-size: white;
+    font-weight: 800;
+}
+
+.brand-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.box {
+    position: relative;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    filter: brightness(70%);
+    transition: all .3s cubic-bezier(.499, .05, .50, .90);
+    will-change: filter;
+}
+
+.box h6 {
+    position: absolute;
+    left: 25px;
+    bottom: 45px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.box h4 {
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box:hover img{
+    filter: brightness(120%);
+    transform: scale(1.1);
+    cursor: pointer;
+    color: black;
+}
+
+
+#btn3{
+    margin-top: 60px;
+    margin-left: 41.5%;
+}
+
+.newslatter-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-top: 0px;
+}
+.newslatter-content h2{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.newslatter-content p{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    
+}
+
+
+.newslatter-content form input:first-child{
+    padding: 20px;
+    background: #202020;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: beige;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    
+    gap: 1rem;
+    
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-box a{
+    color: rgb(172, 170, 170);
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.footer-box a:hover{
+    color: #ffffff;
+    transform: translateX(7px);
+}
+
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    background-color: #202020;
+    margin-right: 10px;
+    transition: transform 0.5s;
+    margin-top: 10px;
+}
+
+.social a:hover{
+    background: #ffffff;
+    color: black;
+    transform: scale(1.2);
+}
+
+.copyright{
+    padding: -10px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: -40px;
+    margin-bottom: -80px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" alt="" class="logo">AD<span>DIDAS</span></a>
+        <div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Brand</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="h-right">
+            <a href="#">Follow Us </a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </header>
+    <!-- secttion 1 -->
+    <section class="home">
+        <div class="home-text">
+            <h5>DISCOVER TIMELESS ELEANCE IN MEN FASHION AND</h5>
+            <h1>Welcome to ADDIDAS</h1>
+            <p>
+                Elevate your style with our exclusive collection of premium menswear
+            </p>
+            <a href="#" class="btn">Shop now</a>
+        </div>
+    </section>
+    <!-- section 2 -->
+    <section class="feature">
+        <div class="feature-content">
+            <div class="row">
+                <div class="row-img">
+                    <img src="./adbottle.jpg" alt="" />
+                </div>
+                <h4>Bottle</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="./adcap.jpg" alt="" />
+                </div>
+                <h4>cap</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="./adshoes.jpg" alt="" />
+                </div>
+                <h4>shoes</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="./adslip.jpg" alt="" />
+                </div>
+                <h4>Slippers</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="./adbag.jpg" alt="" />
+                </div>
+                <h4>bag</h4>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 -->
+    <section class="fashion-blog">
+        <div class="fashion-blog-img">
+            <img src="./adbrand.jpg" alt="">
+        </div>
+        <div class="fashion-blog-text">
+            <h5>IN OUR ADDIDAS FASHION</h5>
+            <h2>50 Yeras of Timeless Men's Fashion </h2>
+            <p>For five decades, our brand has been synonymous with unparalleld craftsmanship and a commitment timeless
+                style. Embracing a heritage that spans half a century, we take pride in curating an exclusive collection
+                faeturing men's jeans, shirt , watches , goggles and shoes. Each piece tells a story of quality,
+                durability, and a dedication to the discering tasyes our customers.
+            </p>
+            <a href="#" class="btn" id="btn2">Read more</a>
+        </div>
+    </section>
+
+    <!-- section 4 -->
+    <section class="Brand">
+        <div class="center-text">
+            <h2> Our Most Popular Product</h2>
+        </div>
+        <div class="brand-content">
+            <div class="box">
+                <img src="./adlower.jpg" alt="">
+                <h6>Lower</h6>
+                <h4>ADIDAS Wear</h4>
+            </div>
+            <div class="box">
+                <img src="./adcap.jpg" alt="">
+                <h6>Men Cap</h6>
+                <h4>Accesories</h4>
+            </div>
+            <div class="box">
+                <img src="./adtshirt.jpg" alt="">
+                <h6>Men Fashion</h6>
+                <h4>T-Shirts</h4>
+            </div>
+        </div>
+        <div class="center-btn" id="btn3">
+            <a href="#" class="btn">See More</a>
+        </div>
+    </section>
+    <!-- section 5 -->
+    <section class="fashion-blog">
+        <div class="fashion-blog-img">
+            <img src="./adimg.jpg" alt="">
+        </div>
+        <div class="fashion-blog-text">
+            <h5>IN OUR ADDIDAS FASHION</h5>
+            <h2>50 Yeras of Timeless Men's Fashion </h2>
+            <p>For five decades, our brand has been synonymous with unparalleld craftsmanship and a commitment timeless
+                style. Embracing a heritage that spans half a century, we take pride in curating an exclusive collection
+                faeturing men's jeans, shirt , watches , goggles and shoes. Each piece tells a story of quality,
+                durability, and a dedication to the discering tasyes our customers.
+            </p>
+            <a href="#" class="btn" id="btn2">Read more</a>
+        </div>
+    </section>
+
+    <!-- section 6 -->
+    <section class="newslatter">
+        <div class="newslatter-content">
+            <div class="newslatter-text">
+                <h2>Ready to Explore?</h2>
+                <p>Ltes go for shopping, make your day.</p>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="submit" value="Get Started" class="btn">
+            </form>
+    </section>
+    <section class="footer">
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Branding</a>
+            <a href="#">Design</a>
+            <a href="#">Marketing</a>
+            <a href="#">Advertisement</a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <a href="#">About Us</a>
+            <a href="#">Features</a>
+            <a href="#">News</a>
+            <a href="#">Menu</a>
+        </div>
+        <div class="footer-box">
+            <h3>Help</h3>
+            <a href="#">FAQs</a>
+            <a href="#">Term & Conditions</a>
+        </div>
+        <div class="social">
+            <h3>Social</h3>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instalod"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section>
+        <div class="copyright">
+            <p>
+                @copyright 2024 by Shaikh Ayan
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
